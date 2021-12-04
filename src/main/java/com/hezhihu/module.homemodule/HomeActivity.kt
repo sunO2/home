@@ -1,17 +1,16 @@
-package com.hezhihu.module.homemodule;
+package com.hezhihu.module.homemodule
 
-import android.os.Bundle;
-
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.alibaba.android.arouter.facade.annotation.Route;
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.TextView
+import com.alibaba.android.arouter.facade.annotation.Route
 
 @Route(path = "/app/home")
-public class HomeActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+class HomeActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(TextView(this).apply{
+            text = "Home 页面ssss"
+        })
     }
 }
